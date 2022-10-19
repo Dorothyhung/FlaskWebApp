@@ -1,7 +1,8 @@
 from flask import Blueprint
 
-resume = Blueprint('resume', __name__)
+#auth = Blueprint('auth', __name__)
 
-@auth.route('/resume')
-def resume():
+"""@auth.route('auth')
+def doc():
     return "<h1>Resume</h1>"
+"""
