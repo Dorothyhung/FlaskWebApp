@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %} Dorothy's Resume {% endblock %}
+
+{% block content %}
+    <h4>Spotify API Web Scraping Project (In Progress)</h4>
+    <br /><br />
+    <h5>Purpose: Provide more interesting data to help Spotify users find songs they will like based on specific criteria/data from Spotify's API</h5>
+    <br /><br />
+    <h5>Project Requirements: </h5>
+    <ul>
+        <li>Use Spotify API to pull data on Spotify tracks audio features</li>
+        <li>Analyze and vizualize data points over time</li>
+        <li>Allow users to view, filter, and search for songs that match specific features</li>
+    </ul>
+
+    <br /><br />
+
+    <h6>Data will be taken from Spotify API at <a href=https://developer.spotify.com/documentation/web-api>SpotifyforDevelopers</a></h6>
+    <br />
+    <h5>Data points:</h5>
+    <h6>Get tracks audio analysis: would be interesting to follow/analyze and also plot against each other in a graph</h6>
+    <ul>
+        <li>accousticness</li>
+        <li>danceability</li>
+        <li>duration_ms</li>
+        <li>enery</li>
+        <li>instrumentalness</li>
+        <li>loudness</li>
+        <li>valence</li>
+    </ul>
+    <h6>Get track: basic data I should include:</h6>
+    <ul>
+        <li>genres</li>
+        <li>name</li>
+        <li>popularity</li>
+        <li>duration</li>
+        <li>explicit bool</li>
+    </ul>
+    <br /><br />
+    <h6>Examples:</h6>
+    <ul>
+        <li>A user wants a song with danceabillity of 0.8 and energy > 0.7. The search feature will pull up a list of Spotify links for songs that fit that criteria.</li>
+        <li>A user wants to look up how a track's popularity changed over time. The graph feature will pull up a graph showing this data.</li>
+    </ul>
+    <br /><br />
+
+{% endblock %}

@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Buda
+- Font Author: Copyright (c) 2010, Adele Antignac (a.antignac@hotmail.fr). All rights reserved. Licenced under SIL OFL vl.1
+- Font Source: http://fonts.gstatic.com/s/buda/v25/GFDqWAN8mnyIJSSrG7UBr7pZKA0.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
