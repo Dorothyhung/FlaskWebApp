@@ -3,86 +3,58 @@
     <head>
         <meta charset=""utf-8 />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css"/>
-
-        <!---
         <link
             rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css"
         />
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             crossorigin="anonymous"
-        />-->
+        />
+
+
 
         <title>{% block title %}Home{% endblock %}</title>
     </head>
-    <body>
-        <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <body></body>
+
+        <!--THIS BELOW WORKS!!!!-->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #87CEEB;">
+          <a class="navbar-brand font-weight-bold" href="/">Dorothy Hung</a>
           <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbar"
           >
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
           </button>
             <div class="collapse navbar-collapse" id="navbar">
               <div class="navbar-nav">
-                <a class="nav-item nav-link" id="home" href="/">About Me</a>
-                <a class="nav-item nav-link" id="resume" href="/resume">Dorothy's Resume</a>
-                <a class="nav-item nav-link" id="linkedin" href="/linkedn">Linkedin</a>
-                <a class="nav-item nav-link" id="project" href="/project">Spotify Project</a>
-
+                  <a class="nav-item nav-link font-weight-bold" id="home" href="/">About Me</a>
+                  <a class="nav-item nav-link font-weight-bold" id="resume" href="/resume">Resume</a>
+                  <a class="nav-item nav-link font-weight-bold" id="linkedn" href="/linkedn">Linkedn</a>
+                  <div class="dropdown show">
+                    <a class="nav-item nav-link dropdown-toggle font-weight-bolder" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                      Spotify Project
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="/project">Project</a>
+                      <a class="dropdown-item" href="/project">Project Code</a>
+                    </div>
+                  </div>
+                </ul>
               </div>
             </div>
-        </nav>-->
-
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Dorothy Hung</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/resume">Resume</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/linkedn">Linkedin</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/project">Spotify Project</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/project">Spotify Project</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
         </nav>
 
-        
+
         <div class="container" width="100%">
           {% block content %}{% endblock %}
         </div>
         
-        <!--
+        
         <script
             src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -98,7 +70,8 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
-        -->
+
+        
 
 
         <!--<link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">-->
