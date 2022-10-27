@@ -8,11 +8,13 @@ def create_app():
     from .resume import resume
     from .linkedn import linkedn
     from .project import project
+    from .github import github
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(resume, url_prefix='/')
     app.register_blueprint(linkedn, url_prefix='/')
     app.register_blueprint(project, url_prefix='/')
+    app.register_blueprint(github, url_prefix='/')
 
 
     return app
