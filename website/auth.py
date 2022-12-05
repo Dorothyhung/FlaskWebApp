@@ -1,7 +1,10 @@
+
+"""
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
+
 
 auth = Blueprint('auth', __name__)
 
@@ -39,3 +42,4 @@ def signup():
 @auth.route('/notesapplogout')
 def logout():
     return render_template("notesapplogout.html")
+    """

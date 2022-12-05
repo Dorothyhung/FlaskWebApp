@@ -1,3 +1,4 @@
+"""
 from . import db
 from flask_login import UserMixin #helps users log in
 from sqlalchemy.sql import func
@@ -16,3 +17,4 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     first_name = db.Column(db.String(150))
     notes = db.relationship('Note') #reference all of a user's notes
+"""
