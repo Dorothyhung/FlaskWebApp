@@ -2,6 +2,7 @@ from flask import Flask
 #from flask_sqlalchemy import SQLAlchemy
 #from os import path
 
+#!!database might be the problem on public website although it works locally
 #create database
 #db = SQLAlchemy()
 #DB_NAME = "database.db"
@@ -22,7 +23,7 @@ def create_app():
     from .horsepower import horsepower
     from .flaskapp import flaskapp
     from .notesapp import notesapp
-    #from .auth import auth
+    from .auth import auth
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(resume, url_prefix='/')
@@ -32,7 +33,7 @@ def create_app():
     app.register_blueprint(horsepower, url_prefix='/')
     app.register_blueprint(flaskapp, url_prefix='/')
     app.register_blueprint(notesapp, url_prefix='/')
-    #app.register_blueprint(auth, url_prefix='/')
+    app.register_blueprint(auth, url_prefix='/')
 
     #from . import models
 
