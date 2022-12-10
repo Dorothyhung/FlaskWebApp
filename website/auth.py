@@ -7,6 +7,10 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 
 auth = Blueprint('auth', __name__)
 
+@auth.route('/notesapp')
+def notehome():
+    return render_template("notesapp.html")
+
 @auth.route('/notesapplogin', methods=['GET', 'POST'])
 def login():
     data = request.form
