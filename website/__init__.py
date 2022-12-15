@@ -1,19 +1,19 @@
 from flask import Flask
-#from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 #from os import path
 
 #!!database might be the problem on public website although it works locally
 #create database
-#db = SQLAlchemy()
-#DB_NAME = "database.db"
+db = SQLAlchemy()
+DB_NAME = "database.db"
 
 
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'wow'
-    #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    #db.init_app(app)
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    db.init_app(app)
 
     from .views import views
     from .auth import auth
