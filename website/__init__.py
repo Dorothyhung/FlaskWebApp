@@ -1,6 +1,6 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from os import path
+#from flask_sqlalchemy import SQLAlchemy
+#from os import path
 #import pyodbc as odbc
 #import pandas as pd
 #import sqlalchemy
