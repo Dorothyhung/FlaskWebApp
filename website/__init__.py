@@ -2,10 +2,10 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 import pyodbc as odbc
-import pandas as pd
-import sqlalchemy
-import psycopg2
-import urllib.parse as up
+#import pandas as pd
+#import sqlalchemy
+#import psycopg2
+#import urllib.parse as up
 
 
 
