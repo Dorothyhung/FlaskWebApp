@@ -1,4 +1,4 @@
-drop table if exists User;
+/*drop table if exists User;
 drop table if exists Notes;
 
 create table User(
