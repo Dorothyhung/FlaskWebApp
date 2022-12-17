@@ -9,12 +9,12 @@ import urllib.parse as up
 
 
 
-url = up.urlparse('postgres://nftfhbsb:ys0LGtiq29f4zFG6Bqnelk7d20VAySV2@mahmud.db.elephantsql.com/nftfhbsb')
+"""url = up.urlparse('postgres://nftfhbsb:ys0LGtiq29f4zFG6Bqnelk7d20VAySV2@mahmud.db.elephantsql.com/nftfhbsb')
 conn = psycopg2.connect(database=url.path[1:], user=url.username, password=url.password, host=url.hostname, port=url.port )
 cursor  = conn.cursor()
 #cursor.execute('static\database.sql')
 conn.commit()
-print('Table created')
+print('Table created')"""
 
 
 """connstring = ("Driver={SQL Server Native Client 11.0};"
