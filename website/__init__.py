@@ -4,6 +4,8 @@ from flask import Flask
 #import pyodbc as odbc
 #import pandas as pd
 #import sqlalchemy
+
+#!!these 2 imports don't work!!
 #import psycopg2
 #import urllib.parse as up
 
