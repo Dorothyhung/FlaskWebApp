@@ -29,3 +29,7 @@ def flaskapp():
 @views.route('/horsepower')
 def horsepower():
     return render_template("horsepower.html")
+
+@views.route('/contact')
+def contactme():
+    return render_template("contact.html")
