@@ -14,6 +14,10 @@ def resume():
 def certificates():
     return render_template("cert.html")
 
+@views.route('/game')
+def game():
+    return render_template("game.html")
+
 @views.route('/project')
 def spotifyproject():
     return render_template("project.html")
