@@ -1,18 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
-    
-</head>
+{% extends "base.html" %}
+{% block title %} Game {% endblock %}
+
+
+{% block content %}
+</br></br>
+<center>
 <body>
+    
     <audio id="soundEfx" preload="auto"></audio>
-    <audio id="sound" src="/website/static/sounds/won.wav" preload="auto"></audio>
-    <audio id="soundgamelost" src="/website/static/sounds/bubbles.wav" preload="auto"></audio>
+    <audio id="sound" src="/static/gamefiles/sounds/won.wav" preload="auto"></audio>
+    <audio id="soundgamelost" src="/static/gamefiles/sounds/bubbles.wav" preload="auto"></audio>
     <audio id="bgsounds" autoplay loop hidden>
-        <source src="/website/static/sounds/bubbles.wav" type="audio/mpeg">
+        <source src="/static/gamefiles/sounds/bubbles.wav" type="audio/mpeg">
     </audio>
-    <script src="/website/main.js"></script>
+    <script src="/static/gamefiles/main.js"></script>
+    
 </body>
+</center>
 </html>
+
+{% endblock %}

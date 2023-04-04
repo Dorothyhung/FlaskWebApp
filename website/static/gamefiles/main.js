@@ -3,11 +3,12 @@ var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
 canvas.width = 1500;
 canvas.height = 700;
+canvas.style = "padding-left:0; padding-right: 0; margin-left: auto; margin-right: auto; display: block;";
 document.body.appendChild(canvas);
 
-var soundEaten = "/website/static/sounds/punch.wav";
-var soundBubbles = "/website/static/sounds/bubbles.wav";
-var soundwin = "/website/static/sounds/won.wav";
+var soundEaten = "/static/gamefiles/sounds/punch.wav";
+var soundBubbles = "/static/gamefiles/sounds/bubbles.wav";
+var soundwin = "/static/gamefiles/sounds/won.wav";
 var soundEfx = document.getElementById("soundEfx");
 
 //Shark sprite variables
@@ -56,7 +57,7 @@ var bgImage = new Image();
 bgImage.onload = function () {
     bgReady = true;
 };
-bgImage.src = "/website/static/images/waterbackground.jpg";
+bgImage.src = "/static/gamefiles/images/waterbackground.jpg";
 
 // Shark image
 var sharkReady = false;
@@ -64,7 +65,7 @@ var sharkImage = new Image();
 sharkImage.onload = function () {
     sharkReady = true;
 };
-sharkImage.src = "/website/static/images/sharkspritesheet2.png";
+sharkImage.src = "/static/gamefiles/images/sharkspritesheet2.png";
 
 // Fish image
 var fishReady = false;
@@ -72,7 +73,7 @@ var fishImage = new Image();
 fishImage.onload = function () {
     fishReady = true;
 };
-fishImage.src = "/website/static/images/fishspritesheet2.png";
+fishImage.src = "/static/gamefiles/images/fishspritesheet2.png";
 
 // Jellyfish images
 var jellyfishReady = false;
@@ -80,7 +81,7 @@ var jellyfishImage = new Image();
 jellyfishImage.onload = function () {
     jellyfishReady = true;
 };
-jellyfishImage.src = "/website/static/images/jellyfish2.png";
+jellyfishImage.src = "/static/gamefiles/images/jellyfish2.png";
 
 
 // Game objects
@@ -149,8 +150,8 @@ var update = function (modifier) {
     }
     if (40 in keysDown) { //  holding down key
         shark.y += shark.speed * modifier;
-        if (shark.y > 520) {
-            shark.y = 520;
+        if (shark.y > (canvas.height - 180)) {
+            shark.y = (canvas.height - 180);
         }
         left = false;
         right = false;
@@ -169,8 +170,8 @@ var update = function (modifier) {
     }
     if (39 in keysDown) { // holding right key
         shark.x += shark.speed * modifier;
-        if (shark.x > 1300) {
-            shark.x = 1300;
+        if (shark.x > (canvas.width - 200)) {
+            shark.x = (canvas.width - 200);
         }
         left = false;
         right = true;
@@ -353,17 +354,17 @@ var update = function (modifier) {
         jellyfish1.x += jellyfish1.speed * modifier;
         jellyfish1.y += jellyfish1.speed * modifier;
     }
-    if (jellyfish1.x > 1400 || jellyfish1.y > 600) {
+    if (jellyfish1.x > (canvas.width-100) || jellyfish1.y > (canvas.height-100)) {
         jellyfish1.bool = false;
         jellyfish1.x -= jellyfish1.speed * modifier;
         jellyfish1.y -= jellyfish1.speed * modifier;
     }
-    if (jellyfish2.x <= 0 || jellyfish2.y > 600) {
+    if (jellyfish2.x <= 0 || jellyfish2.y > (canvas.height-100)) {
         jellyfish2.bool = true;
         jellyfish2.x += jellyfish2.speed * modifier;
         jellyfish2.y -= jellyfish2.speed * modifier;
     }
-    if (jellyfish2.x > 1400 || jellyfish2.y < 0) {
+    if (jellyfish2.x > (canvas.width-100) || jellyfish2.y < 0) {
         jellyfish2.bool = false;
         jellyfish2.x -= jellyfish2.speed * modifier;
         jellyfish2.y += jellyfish2.speed * modifier;
@@ -372,7 +373,7 @@ var update = function (modifier) {
         jellyfish3.xbool = true;
         jellyfish3.x += jellyfish3.speed * modifier;
     }
-    if (jellyfish3.x >= 1400) {
+    if (jellyfish3.x >= (canvas.width-100)) {
         jellyfish3.xbool = false;
         jellyfish3.x -= jellyfish3.speed * modifier;
     }
@@ -380,7 +381,7 @@ var update = function (modifier) {
         jellyfish3.ybool = true;
         jellyfish3.y += jellyfish3.speed * modifier;
     }
-    if (jellyfish3.y >= 600) {
+    if (jellyfish3.y >= (canvas.height-100)) {
         jellyfish3.ybool = false;
         jellyfish3.y -= jellyfish3.speed * modifier;
     }
@@ -431,13 +432,13 @@ var reset = function () {
 };
 
 var placeItem = function(item) { //ensures fish + jellys don't start too close to shark
-    let xposition = 700;
-    let yposition = 300;
-    while (xposition >= 600 & xposition <= 800) {
-        xposition = Math.random() * 1400;
+    let xposition = (canvas.width)/2;
+    let yposition = (canvas.height)/2;
+    while (xposition >= canvas.width/2-100 && xposition <= canvas.width/2+100) {
+        xposition = Math.random() * canvas.width;
     }
-    while (yposition >= 200 && yposition <= 400) {
-        yposition = Math.random() * 600;
+    while (yposition >= canvas.height/2-100 && yposition <= canvas.height/2+100) {
+        yposition = Math.random() * canvas.height;
     }
     item.x = xposition;
     item.y = yposition;
