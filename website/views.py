@@ -18,6 +18,10 @@ def certificates():
 def game():
     return render_template("game.html")
 
+@views.route('/counter')
+def counter():
+    return render_template("counter.html")
+
 @views.route('/project')
 def spotifyproject():
     return render_template("project.html")
