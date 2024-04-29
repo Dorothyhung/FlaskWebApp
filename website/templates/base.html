@@ -1,138 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            crossorigin="anonymous"
-        />
-        <link
-            rel="stylesheet"
-            href="./../static/css/style.css" />
-        {% block style %}{% endblock %}
-
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PJQPSF006"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-5PJQPSF006');
-        </script>
-
-        <title>{% block title %}Home{% endblock %}</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #87CEEB;">
-          <a class="navbar-brand font-weight-bold" href="/">Dorothy Hung</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbar"
-          >
-          <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbar">
-              <div class="navbar-nav">
-                  <a class="nav-item nav-link font-weight-bold" id="home" href="/">About Me</a>
-                  <a class="nav-item nav-link font-weight-bold" id="resume" href="/resume">Resume</a>
-                  <!-- <a class="nav-item nav-link font-weight-bold" id="cert" href="/certificates">Certificates</a> -->
-                  <div class="dropdown show">
-                    <a class="nav-item nav-link dropdown-toggle font-weight-bolder" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                      Links
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="https://www.linkedin.com/in/dorothyhung1" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                      <a class="dropdown-item" href="https://github.com/Dorothyhung" target="_blank" rel="noopener noreferrer">Github</a>
-                    </div>
-                  </div>
-                  <div class="dropdown show">
-                    <a class="nav-item nav-link dropdown-toggle font-weight-bolder" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                      Spotify Project
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="/project">Project</a>
-                      <a class="dropdown-item" target="_blank" href="https://github.com/Dorothyhung/P320-Spotify-API-Project">Project Code</a>
-                      <a class="dropdown-item" target="_blank" href="https://spotifyaudioanalysis.com/">SpotifyAudioAnalysis App</a>
-                    </div>
-                  </div>
-                  <div class="dropdown show">
-                    <a class="nav-item nav-link dropdown-toggle font-weight-bolder" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                      More Projects
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" id="flaskapp" href="/flaskapp">Flask Website</a>
-                      <a class="dropdown-item" id="game" href="/game">Game</a>
-                      <a class="dropdown-item" id="avgprogram" target="_blank" href="https://avg.dorothyhung.net">Average Program</a>
-                      <a class="dropdown-item" id="notesapp" href="/notesapp">Notes App</a>
-                    </div>
-                  </div>
-                  <a class="nav-item nav-link font-weight-bold" id="contact" href="/contact">Contact Me</a>
-                </ul>
-              </div>
-            </div>
-        </nav>
-        
-        <!--messages for sign up-->
-        {% with messages = get_flashed_messages(with_categories=true) %} {% if
-          messages %} {% for category, message in messages %} {% if category ==
-          'error' %}
-          <div class="alert alert-danger alter-dismissable fade show" role="alert">
-            {{ message }}
-            <button type="button" class="close" data-dismiss="alert">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          {% else %}
-          <div class="alert alert-success alter-dismissable fade show" role="alert">
-            {{ message }}
-            <button type="button" class="close" data-dismiss="alert">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          {% endif %} {% endfor %} {% endif %} {% endwith %}
-
-
-        <div class="container" width="100%">
-          {% block content %}{% endblock %}
-        </div>
-        
-        
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"
-        ></script>
-
-        
-
-
-        <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
-        <link rel="shortcut icon" type="image/x-icon" href="/static/favicon_io/favicon.ico" />
-        <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
-
-    </body>
-</html>
-=======
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -195,15 +60,15 @@
                       <a class="dropdown-item" target="_blank" href="http://spotifyscraper.dorothyhung.net">Spotify Analysis Website</a>
                     </div>
                   </div>
-                  <a class="nav-item nav-link font-weight-bold" id="game" href="/game">Game</a>
-                  <a class="nav-item nav-link font-weight-bold" id="flaskapp" href="/flaskapp">Flask Website</a>
-                  <a class="nav-item nav-link font-weight-bold" id="notesapp" target="_blank" href="https://avg.dorothyhung.net">Average Program</a>
-                  <a class="nav-item nav-link font-weight-bold" id="notesapp" href="/notesapp">Notes App</a>
                   <div class="dropdown show">
                     <a class="nav-item nav-link dropdown-toggle font-weight-bolder" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                      Other Projects
+                      More Projects
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" id="game" href="/game">Game</a>
+                      <a class="dropdown-item" id="flaskapp" href="/flaskapp">Flask Website</a>
+                      <a class="dropdown-item" id="notesapp" target="_blank" href="https://avg.dorothyhung.net">Average Program</a>
+                      <a class="dropdown-item" id="notesapp" href="/notesapp">Notes App</a>
                       <a class="dropdown-item" href="/horsepower">Horsepower Statistics</a>
                     </div>
                   </div>
@@ -264,4 +129,3 @@
 
     </body>
 </html>
->>>>>>> parent of bbe128c (reorganize links)
