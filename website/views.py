@@ -18,9 +18,9 @@ def certificates():
 def game():
     return render_template("game.html")
 
-@views.route('/counter')
-def counter():
-    return render_template("counter.html")
+# @views.route('/counter')
+# def counter():
+#     return render_template("counter.html")
 
 @views.route('/project')
 def spotifyproject():
@@ -34,9 +34,9 @@ def spotifycode():
 def flaskapp():
     return render_template("flaskapp.html")
 
-@views.route('/horsepower')
-def horsepower():
-    return render_template("horsepower.html")
+# @views.route('/horsepower')
+# def horsepower():
+#     return render_template("horsepower.html")
 
 @views.route('/contact')
 def contactme():
