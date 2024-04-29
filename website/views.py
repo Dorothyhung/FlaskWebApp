@@ -34,9 +34,9 @@ def spotifycode():
 def flaskapp():
     return render_template("flaskapp.html")
 
-# @views.route('/horsepower')
-# def horsepower():
-#     return render_template("horsepower.html")
+@views.route('/horsepower')
+def horsepower():
+    return render_template("horsepower.html")
 
 @views.route('/contact')
 def contactme():

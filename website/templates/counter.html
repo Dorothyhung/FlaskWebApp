@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} Counter {% endblock %}
+
+{% block content %}
+<body>
+<script src="/static/counter.js"></script>
+</br>
+    <div>
+        <input id="input" type="number" placeholder="0">
+        <div>
+            <button id="subtract">-</button>
+            <button id="add">+</button>
+        </div>
+    </div>
+</body>
+{% endblock %}
